@@ -9,6 +9,29 @@ class FileUploadView(APIView):
     authentication_classes = [OAuth2Authentication]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
-        return Response({"message": "Welcome to CloudFileAPI!"})
+    def post(self, request):
+        return Response({"message": "File upload endpoint (not implemented yet)"}, status=501)
 
+
+class FileListView(APIView):
+    authentication_classes = [OAuth2Authentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({"message": "List files endpoint (not implemented yet)"}, status=501)
+    
+
+class FileDetailView(APIView):
+    authentication_classes = [OAuth2Authentication]
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, file_id):
+        return Response({"message": f"File details for {file_id} (not implemented yet)"}, status=501)
+
+
+class FileDeleteView(APIView):
+    authentication_classes = [OAuth2Authentication]
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request, file_id):
+        return Response({"message": f"File {file_id} deleted (not implemented yet)"}, status=501)
